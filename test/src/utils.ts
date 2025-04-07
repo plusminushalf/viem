@@ -30,7 +30,6 @@ import {
   ErrorsExample,
   OffchainLookupExample,
   Payable,
-  Simple7702Account,
   SoladyAccount06,
   SoladyAccount07,
   SoladyAccountFactory06,
@@ -139,16 +138,6 @@ export async function deployPayable() {
     abi: Payable.abi,
     bytecode: Payable.bytecode.object,
   })
-}
-
-export async function deploySimple7702Account_08() {
-  const { contractAddress: implementationAddress } = await deploy(client, {
-    abi: Simple7702Account.abi,
-    bytecode: Simple7702Account.bytecode.object,
-  })
-  return {
-    implementationAddress: implementationAddress!,
-  }
 }
 
 export async function deploySoladyAccount_07() {
